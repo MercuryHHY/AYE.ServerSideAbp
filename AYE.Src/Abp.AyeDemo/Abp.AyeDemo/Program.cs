@@ -1,6 +1,11 @@
 using AyeDemo.Web;
 using Microsoft.OpenApi.Models;
 
+
+#if true
+
+#region
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -45,3 +50,23 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+#endregion
+
+
+#endif
+
+
+
+#if false
+
+var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseUrls(builder.Configuration["App:SelfUrl"]);
+builder.Host.UseAutofac();
+//builder.Host.UseSerilog();
+await builder.Services.AddApplicationAsync<AyeDemoWebModule>();
+var app = builder.Build();
+await app.InitializeApplicationAsync();
+await app.RunAsync();
+
+#endif

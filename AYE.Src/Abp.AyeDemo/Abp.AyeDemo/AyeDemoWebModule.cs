@@ -1,5 +1,6 @@
 ﻿using AyeDemo.Application;
 using AyeDemo.SqlSugarCore;
+using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.AntiForgery;
 using Volo.Abp.Auditing;
@@ -20,7 +21,7 @@ namespace AyeDemo.Web
         )]
     public class AyeDemoWebModule : AbpModule
     {
-        public override void ConfigureServices(ServiceConfigurationContext context)
+        public override Task ConfigureServicesAsync(ServiceConfigurationContext context)
         {
             //Configure<AbpAuditingOptions>(
             //    options =>
@@ -45,8 +46,20 @@ namespace AyeDemo.Web
 
 
 
-
+            return Task.CompletedTask;  
         }
+
+
+
+        public override Task OnApplicationInitializationAsync(ApplicationInitializationContext context)
+        { 
+        
+            
+            
+            return Task.CompletedTask;
+        }
+
+
 
     }
 }
