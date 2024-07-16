@@ -1,0 +1,6 @@
+@AYE.ServerSideAbp_HostAddress = http://localhost:5217
+
+GET {{AYE.ServerSideAbp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

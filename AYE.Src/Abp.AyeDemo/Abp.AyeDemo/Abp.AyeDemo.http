@@ -1,0 +1,6 @@
+@Abp.AyeDemo_HostAddress = http://localhost:5228
+
+GET {{Abp.AyeDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

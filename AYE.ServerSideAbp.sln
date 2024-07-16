@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AYE.BaseFramework", "AYE.BaseFramework", "{9C8A353E-D6F9-4148-98EA-47267C94FDA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AYE.Modules", "AYE.Modules", "{6D32FC8D-DC75-4E28-B9DF-CAFEC40FF14D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AYE.Src", "AYE.Src", "{C6BD544D-218A-4F30-9FE5-CD70233E2237}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AYE.Test", "AYE.Test", "{668F55D5-1B5D-4516-B57A-B0BEFE867582}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AYE.Abp.Web", "AYE.Src\AYE.ServerSideAbp\AYE.Abp.Web.csproj", "{90AE105E-3385-41AC-8CD9-C5674ECE405E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abp.AyeDemo", "Abp.AyeDemo", "{7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AyeDemo.Web", "AYE.Src\Abp.AyeDemo\Abp.AyeDemo\AyeDemo.Web.csproj", "{4FCDE09B-6003-47B8-BA52-A8F4D5BDDD31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AyeDemo.Application", "AYE.Src\Abp.AyeDemo\AyeDemo.Application\AyeDemo.Application.csproj", "{9B0B8228-E3C8-4207-A1B8-C7A15E38247F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AyeDemo.Application.Contracts", "AYE.Src\Abp.AyeDemo\AyeDemo.Application.Contracts\AyeDemo.Application.Contracts.csproj", "{3CB699C3-E852-4B68-881C-148583652BF6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AyeDemo.Domain", "AYE.Src\Abp.AyeDemo\AyeDemo.Domain\AyeDemo.Domain.csproj", "{01C2FA9A-E172-4C4C-AD6F-439515FBFACE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AyeDemo.Domain.Shared", "AYE.Src\Abp.AyeDemo\AyeDemo.Domain.Shared\AyeDemo.Domain.Shared.csproj", "{7566C6FA-B26E-4AF3-B1E9-AA6412DBCDE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AyeDemo.SqlSugarCore", "AYE.Src\Abp.AyeDemo\AyeDemo.SqlSugarCore\AyeDemo.SqlSugarCore.csproj", "{D01D93E4-3B3D-4BD9-B8B2-77069369260E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90AE105E-3385-41AC-8CD9-C5674ECE405E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AE105E-3385-41AC-8CD9-C5674ECE405E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AE105E-3385-41AC-8CD9-C5674ECE405E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AE105E-3385-41AC-8CD9-C5674ECE405E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCDE09B-6003-47B8-BA52-A8F4D5BDDD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCDE09B-6003-47B8-BA52-A8F4D5BDDD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCDE09B-6003-47B8-BA52-A8F4D5BDDD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCDE09B-6003-47B8-BA52-A8F4D5BDDD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0B8228-E3C8-4207-A1B8-C7A15E38247F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0B8228-E3C8-4207-A1B8-C7A15E38247F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0B8228-E3C8-4207-A1B8-C7A15E38247F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0B8228-E3C8-4207-A1B8-C7A15E38247F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB699C3-E852-4B68-881C-148583652BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB699C3-E852-4B68-881C-148583652BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB699C3-E852-4B68-881C-148583652BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB699C3-E852-4B68-881C-148583652BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C2FA9A-E172-4C4C-AD6F-439515FBFACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C2FA9A-E172-4C4C-AD6F-439515FBFACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C2FA9A-E172-4C4C-AD6F-439515FBFACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C2FA9A-E172-4C4C-AD6F-439515FBFACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7566C6FA-B26E-4AF3-B1E9-AA6412DBCDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7566C6FA-B26E-4AF3-B1E9-AA6412DBCDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7566C6FA-B26E-4AF3-B1E9-AA6412DBCDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7566C6FA-B26E-4AF3-B1E9-AA6412DBCDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D01D93E4-3B3D-4BD9-B8B2-77069369260E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01D93E4-3B3D-4BD9-B8B2-77069369260E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01D93E4-3B3D-4BD9-B8B2-77069369260E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01D93E4-3B3D-4BD9-B8B2-77069369260E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90AE105E-3385-41AC-8CD9-C5674ECE405E} = {C6BD544D-218A-4F30-9FE5-CD70233E2237}
+		{7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F} = {C6BD544D-218A-4F30-9FE5-CD70233E2237}
+		{4FCDE09B-6003-47B8-BA52-A8F4D5BDDD31} = {7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}
+		{9B0B8228-E3C8-4207-A1B8-C7A15E38247F} = {7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}
+		{3CB699C3-E852-4B68-881C-148583652BF6} = {7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}
+		{01C2FA9A-E172-4C4C-AD6F-439515FBFACE} = {7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}
+		{7566C6FA-B26E-4AF3-B1E9-AA6412DBCDE0} = {7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}
+		{D01D93E4-3B3D-4BD9-B8B2-77069369260E} = {7D1CFAD6-A8C2-4F36-955D-47FE488D9F9F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31E5786E-53F4-4522-B3D7-8200AA77C18A}
+	EndGlobalSection
+EndGlobal
