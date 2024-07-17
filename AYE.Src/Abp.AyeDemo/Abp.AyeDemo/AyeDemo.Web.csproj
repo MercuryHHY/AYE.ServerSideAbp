@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.7" />
+    <PackageReference Include="Volo.Abp.AspNetCore.MultiTenancy" Version="8.2.0" />
     <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="8.2.0" />
     <PackageReference Include="Volo.Abp.Autofac" Version="8.2.0" />
     <PackageReference Include="Volo.Abp.Swashbuckle" Version="8.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\AYE.BaseFramework\AYE.Framework.AspNetCore\AYE.Framework.AspNetCore.csproj" />
     <ProjectReference Include="..\AyeDemo.Application\AyeDemo.Application.csproj" />
     <ProjectReference Include="..\AyeDemo.SqlSugarCore\AyeDemo.SqlSugarCore.csproj" />
   </ItemGroup>

@@ -1,8 +1,12 @@
+//#define DEBUG
+
+#undef DEBUG
+
 using AyeDemo.Web;
 using Microsoft.OpenApi.Models;
 
 
-#if true
+#if DEBUG
 
 #region
 
@@ -54,19 +58,35 @@ app.Run();
 #endregion
 
 
-#endif
+#else
 
 
 
-#if false
+//var builder = WebApplication.CreateBuilder(args);
+//builder.WebHost.UseUrls(builder.Configuration["App:SelfUrl"]);
+//builder.Host.UseAutofac();
+////builder.Host.UseSerilog();
+//await builder.Services.AddApplicationAsync<AyeDemoWebModule>();
+//var app = builder.Build();
+//await app.InitializeApplicationAsync();
+//await app.RunAsync();
+
+
+
+
 
 var builder = WebApplication.CreateBuilder(args);
-builder.WebHost.UseUrls(builder.Configuration["App:SelfUrl"]);
 builder.Host.UseAutofac();
 //builder.Host.UseSerilog();
 await builder.Services.AddApplicationAsync<AyeDemoWebModule>();
 var app = builder.Build();
 await app.InitializeApplicationAsync();
+app.MapControllers();
 await app.RunAsync();
+
+
+
+
+
 
 #endif
