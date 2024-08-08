@@ -45,8 +45,6 @@ namespace AyeDemo.Application.Services
             try
             {
                 await _repository.InsertAsync(new BookAggregateRoot { Name = "HHY", PublishDate = DateTime.Now, Price = 100 });
-
-
             }
             catch (Exception e)
             {

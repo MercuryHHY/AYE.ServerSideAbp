@@ -62,6 +62,7 @@ namespace AyeDemo.Web
             Configure<AbpAspNetCoreMvcOptions>(options =>
             {
                 options.ConventionalControllers.Create(typeof(AyeDemoApplicationModule).Assembly, options => options.RemoteServiceName = "default");
+                //这里可以添加依赖模块中的 动态API
             });
 
            
