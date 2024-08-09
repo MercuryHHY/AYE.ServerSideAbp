@@ -78,7 +78,11 @@ app.Run();
 var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseAutofac();
 //builder.Host.UseSerilog();
-await builder.Services.AddApplicationAsync<AyeDemoWebModule>();
+await builder.Services.AddApplicationAsync<AyeDemoWebModule>(it =>
+{
+    it.ApplicationName = "HHY";//测试  指定应用的唯一名称
+    it.Environment= Environments.Staging;//测试 指定环境
+} );
 var app = builder.Build();
 await app.InitializeApplicationAsync();
 app.MapControllers();

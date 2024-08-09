@@ -1,4 +1,5 @@
 using AyeDemo.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 using Volo.Abp.Domain.Repositories;
@@ -35,7 +36,7 @@ namespace Abp.AyeDemo.Controllers
             .ToArray();
         }
 
-
+        //[Authorize]
         [HttpPost(Name = "IRepositoryTest")]
         public async Task<string> GetIRepositoryTest()
         {

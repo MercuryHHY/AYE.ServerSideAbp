@@ -19,6 +19,9 @@ using Volo.Abp.MultiTenancy;
 using Volo.Abp.Swashbuckle;
 using Microsoft.OpenApi.Models;
 using Volo.Abp.AspNetCore.MultiTenancy;
+using SqlSugar;
+using System.Security.Cryptography.Xml;
+using System.Xml.Linq;
 
 namespace AyeDemo.Web
 {
@@ -82,6 +85,27 @@ namespace AyeDemo.Web
                     options.SwaggerDoc("v1", new OpenApiInfo { Title = "AyeDemo", Version = "v1" });
                     options.DocInclusionPredicate((docNmae, description) => true);
                     options.CustomSchemaIds(type => type.FullName);
+
+#if false
+                    //swaggar 界面  设置自定义 要发送的Authorization报文头
+                    var scheme = new OpenApiSecurityScheme()
+                    {
+                        Description = "Authorization header. \r\nExample: 'Bearer 12345abcdef'", 
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                             Id = "Authorization"
+                        }, 
+                        Scheme = "oauth2",
+                        Name = "Authorization", 
+                        In = ParameterLocation.Header,
+                        Type = SecuritySchemeType.ApiKey,
+                    };
+                    options.AddSecurityDefinition("Authorization", scheme);
+                    var requirement = new OpenApiSecurityRequirement();
+                    requirement[scheme] = new List<string>();
+                    options.AddSecurityRequirement(requirement);
+#endif
                 }
             );
 

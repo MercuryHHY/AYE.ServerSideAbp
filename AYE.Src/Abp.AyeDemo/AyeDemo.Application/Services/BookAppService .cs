@@ -2,6 +2,8 @@
 using AyeDemo.Application.Contracts.IServices;
 using AyeDemo.Domain.Entities;
 using Microsoft.Extensions.Logging;
+using System.Dynamic;
+using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Volo.Abp.Domain.Repositories;
@@ -29,13 +31,14 @@ namespace AyeDemo.Application.Services
 
         //}
 
-
+        private readonly IAbpHostEnvironment _abpHostEnvironment;
         private readonly ILogger<BookAppService> _logger;
         private IRepository<BookAggregateRoot, Guid> _repository;
-        public BookAppService(IRepository<BookAggregateRoot, Guid> repository, ILogger<BookAppService> logger)
+        public BookAppService(IRepository<BookAggregateRoot, Guid> repository, ILogger<BookAppService> logger, IAbpHostEnvironment abpHostEnvironment)
         {
             _repository = repository;
             _logger = logger;
+            _abpHostEnvironment = abpHostEnvironment;
         }
 
 
@@ -55,7 +58,17 @@ namespace AyeDemo.Application.Services
         }
 
 
+        /// <summary>
+        /// 获取程序当前环境
+        /// </summary>
+        /// <returns></returns>
+        public  string? GetEnvironment()
+        {
+            var environmentName = _abpHostEnvironment.EnvironmentName;
 
-       
+            return environmentName;
+        }
+
+
     }
 }
